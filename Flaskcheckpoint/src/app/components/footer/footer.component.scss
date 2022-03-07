@@ -1,6 +1,18 @@
+footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.transparente {
+  height: 500px;
+}
 .pie-pagina {
     width: 100%;
-    background-color: #babada;
+    background-color: #000000;
   
     .caja0 {
       width: 90%;
