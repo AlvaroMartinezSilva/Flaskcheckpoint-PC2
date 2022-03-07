@@ -1,9 +1,11 @@
+@import '_colors';
+
 footer {
   position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
-  color: white;
+  color: $fugaz;
   text-align: center;
 }
 
@@ -12,7 +14,7 @@ footer {
 }
 .pie-pagina {
     width: 100%;
-    background-color: #000000;
+    background-color: $secundario;
   
     .caja0 {
       width: 90%;
@@ -25,13 +27,13 @@ footer {
   
       .caja {
         h2 {
-          color: #ffdaba;
+          color: $titulo;
           margin-bottom: 25px;
           font-size: 20px;
         }
   
         p {
-          color: #ffdada;
+          color: $texto;
           margin-bottom: 25px;
         }
   
@@ -41,7 +43,7 @@ footer {
           width: 45px;
           height: 45px;
           line-height: 10px;
-          color: #ffffff;
+          color: $emisivo;
           margin-right: 10px;
           background-color: #0d2033;
           text-aling: center;
