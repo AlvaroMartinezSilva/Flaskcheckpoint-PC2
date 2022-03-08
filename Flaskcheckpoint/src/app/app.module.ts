@@ -8,14 +8,16 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AnalisisSentimientosComponent } from './components/analisis-sentimientos/analisis-sentimientos.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 @NgModule({
-  
+
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    AnalisisSentimientosComponent
+    AnalisisSentimientosComponent,
+    WelcomeComponent
   ],
 
   imports: [
