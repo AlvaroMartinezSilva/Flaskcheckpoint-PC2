@@ -8,6 +8,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AnalisisSentimientosComponent } from './components/analisis-sentimientos/analisis-sentimientos.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
+import { FalskApiService } from './services/falsk-api.service';
+
 
 @NgModule({
   declarations: [
@@ -19,9 +23,10 @@ import { AnalisisSentimientosComponent } from './components/analisis-sentimiento
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [FalskApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
