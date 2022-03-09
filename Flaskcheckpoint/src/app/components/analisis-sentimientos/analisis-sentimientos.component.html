@@ -1,2 +1,16 @@
 <app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 cajaSentimiento">
+        <h2 class="tituloSentimiento">Análisis del Sentimiento</h2>
+        <br>  
+        <textarea [(ngModel)]="textareaContent"  class="form-control col-md-12 textarea" type="text"
+            placeholder="Inserte texto" rows="15"></textarea>
+          <a class="btn btn-primary" (click)="makeRequest()">Analizar</a>
+          <br>
+          <img [src]="imagen" class="imagenSentimiento"/>
+          <pre>{{result}}</pre>
+      </div>
+    </div>
+  </div>
 <app-footer></app-footer>

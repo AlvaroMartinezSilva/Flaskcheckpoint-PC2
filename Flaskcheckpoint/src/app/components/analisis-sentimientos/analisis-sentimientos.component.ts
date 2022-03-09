@@ -1,15 +1,51 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-analisis-sentimientos',
   templateUrl: './analisis-sentimientos.component.html',
   styleUrls: ['./analisis-sentimientos.component.scss']
 })
-export class AnalisisSentimientosComponent implements OnInit {
 
-  constructor() { }
+
+export class AnalisisSentimientosComponent implements OnInit {
+  textareaContent: string = '';
+  json: any = false;
+  imagen: any;
+  result: any;
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
+
+  makeRequest() {
+    this.http.post('http://127.0.0.1:5000/analisis', { 
+      cuerpo: this.textareaContent
+    }).toPromise().then(response => {
+      console.log(response);
+      this.json = response;
+      if(this.json.compound >= 0.5){
+        this.imagen = '.png';
+        this.result = "Texto Positivo"
+      }
+      else if(this.json.compound > -0.5 && this.json.compound < 0.5){
+        this.imagen = '.png';
+        this.result = "Texto Neutro"
+      }
+      else if(this.json.compound <= -0.5){
+        this.imagen = '.png';
+        this.result = "Texto Negativo"
+      }
+      }
+      
+    )
+    
+  }
+
+
+  
+
+
 
 }
