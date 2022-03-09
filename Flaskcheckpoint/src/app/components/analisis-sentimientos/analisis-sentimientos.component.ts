@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { FlaskApiService } from '../../services/flask-api.service';
 
 @Component({
   selector: 'app-analisis-sentimientos',
   templateUrl: './analisis-sentimientos.component.html',
-  styleUrls: ['./analisis-sentimientos.component.scss']
+  styleUrls: ['./analisis-sentimientos.component.scss'],
+  providers: [FlaskApiService]
 })
 
 
@@ -14,9 +16,14 @@ export class AnalisisSentimientosComponent implements OnInit {
   imagen: any;
   result: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private flask_api: FlaskApiService) { }
 
   ngOnInit(): void {
+    this.flask_api.getAll().subscribe((res) =>
+    {
+      console.log('Res ', res)
+    });
+
   }
 
   makeRequest() {
