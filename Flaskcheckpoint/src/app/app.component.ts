@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FlaskAPIService } from './service/flask-api.service';
 
 @Component({
   selector: 'app-root',
@@ -13,13 +12,12 @@ export class AppComponent implements OnInit{
 
   servicio: any = {};
   
-  constructor(private service: FlaskAPIService){
+  constructor(){
 
   }
-
   ngOnInit(): void {
-    this.service.getAllRequest().subscribe(servicio => {
-      this.servicio = servicio;
-    })
+    throw new Error('Method not implemented.');
   }
+
+  
 }
