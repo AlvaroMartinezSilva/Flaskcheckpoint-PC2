@@ -9,6 +9,7 @@ import { AnalisisSentimientosComponent } from './components/analisis-sentimiento
 
 import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { DescriptionComponent } from './components/description/description.component';
 
 @NgModule({
 
@@ -17,7 +18,8 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
     NavbarComponent,
     FooterComponent,
     AnalisisSentimientosComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    DescriptionComponent
   ],
 
   imports: [
