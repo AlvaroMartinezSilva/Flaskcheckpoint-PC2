@@ -10,6 +10,7 @@ import { AnalisisSentimientosComponent } from './components/analisis-sentimiento
 import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { DescriptionComponent } from './components/description/description.component';
+import { FlaskApiService } from './services/flask-api.service';
 
 @NgModule({
 
@@ -29,7 +30,7 @@ import { DescriptionComponent } from './components/description/description.compo
     HttpClientModule
   ],
 
-  providers: [],
+  providers: [FlaskApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

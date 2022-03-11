@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FlaskApiService } from '../../services/flask-api.service';
 
@@ -16,6 +16,8 @@ export class AnalisisSentimientosComponent implements OnInit {
   imagen: any;
   result: any;
 
+  texto = '';
+
   constructor(private http: HttpClient, private flask_api: FlaskApiService) { }
 
   ngOnInit(): void {
@@ -24,6 +26,16 @@ export class AnalisisSentimientosComponent implements OnInit {
       console.log('Res ', res)
     });
 
+  }
+
+  analizarTexto(texto: string){
+
+
+
+    this.flask_api.analizarSentimiento(texto).subscribe((res) =>
+    {
+      console.log('Res ', res)
+    });
   }
 
   makeRequest() {

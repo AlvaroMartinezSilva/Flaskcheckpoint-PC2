@@ -14,4 +14,13 @@ export class FlaskApiService {
     return this.http.get<any>('http://127.0.0.1:5000/saludo');
   }
 
+  analizarSentimiento(textoSinAnalizar: string):Observable<any>{
+
+    var cuerpo = {'texto': textoSinAnalizar}
+
+    var respuestaAPI = this.http.post<any>('http://127.0.0.1:5000/sentimiento', cuerpo);
+
+    return respuestaAPI;
+  }
+
 }

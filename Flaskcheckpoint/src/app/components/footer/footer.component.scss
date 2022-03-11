@@ -1,34 +1,29 @@
 @import '_colors';
 
-footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+footer {  
   width: 100%;
-  height: 50px;
-  color: $fugaz;
+  height: 10%;
+  color: $terciario;
   text-align: center;
 }
 
-.transparente {
-  height: 500px;
+.info{
+  background-color: $secundario;
+  
 }
 .pie-pagina {
     width: 100%;
-    background-color: $secundario;
+    background-color: $principal;
   
     .caja0 {
       width: 90%;
       max-width: 1200px;
       margin: auto;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 50px;
-      padding: 45px 0px;
   
       .caja {
-        h2 {
-          color: $titulo;
+        h1 {
+          color: $terciario;
           margin-bottom: 25px;
           font-size: 20px;
         }
