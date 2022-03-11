@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 @import '_colors'; 
 
 .image::before{
@@ -13,7 +11,6 @@
     background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../../../assets/imagen1.avif');
     background-size: cover;
 }
->>>>>>> 8227da54a03b030d67980278706e226fb88cbb46
 
 .text{
     h1{
@@ -24,17 +21,7 @@
       left: 29%;
     }
 }
-<<<<<<< HEAD
 
-
-button{
-    position: absolute;
-    background-color: #17A589;
-    color: white;
-    border-color: black;
-    border-radius: 5px;
-    top: 50%;
-=======
 button{
     position: absolute;
     background-color: $acento;
@@ -42,6 +29,5 @@ button{
     border-radius: 20px;
     padding: 0.5%;
     top: 60%;
->>>>>>> 8227da54a03b030d67980278706e226fb88cbb46
     left: 45%;
 }
