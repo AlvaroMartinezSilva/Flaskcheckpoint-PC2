@@ -11,14 +11,7 @@ const routes: Routes = [
 path:'analisis-sentimientos', component: AnalisisSentimientosComponent
 
 },{
-  path:'footer', component: FooterComponent
-
-}
-,{
-  path:'navbar', component: NavbarComponent
-
-},{
-  path:'welcome', component: WelcomeComponent
+  path:'', component: WelcomeComponent
 
 },{
 
