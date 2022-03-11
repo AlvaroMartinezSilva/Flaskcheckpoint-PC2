@@ -1,3 +1,5 @@
+@import '_colors'; 
+
 .image::before{
     content: "";
     position: absolute;
@@ -11,19 +13,19 @@
 
 .text{
     h1{
-      color: white;
+      color: $texto;
       position: absolute;
       font-size: 30px;
       top: 50%;
       left: 44%
     }
 }
-
 button{
     position: absolute;
-    background-color: #17A589;
-    color: white;
+    background-color: $acento;
+    color: $secundario;
     border-radius: 20px;
+    padding: 0.5%;
     top: 60%;
     left: 45%;
 }
