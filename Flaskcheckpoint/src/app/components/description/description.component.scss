@@ -1,19 +1,33 @@
-.description{
-    position: absolute;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-left: 10%;
-    color: white;
-    h2{
-        color: #5CE5CA;
-        text-align: center;
-    }
+@import'_colors';
 
-.text{
-    padding-left: 30%;
-    padding-right: 30%;
+.description{
+  position: absolute;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 10%;
+  color: $texto;
+  h1{
+      color: #26DFBA;
+      text-align: center;
+  }
+
+.text1{
+  padding-left: 27%;
+  padding-right: 27%;
 }
 
-
-
+.image{
+  img{
+    width: 410px;
+    height: 220px;
+    display: block;
+    margin: 0 auto;
+   
+  }
+}
+.text2{
+  padding-left: 27%;
+  padding-right: 27%;
+  
+}
 }

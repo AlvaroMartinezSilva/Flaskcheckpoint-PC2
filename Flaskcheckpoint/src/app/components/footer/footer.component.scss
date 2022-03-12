@@ -5,24 +5,32 @@ footer {
   height: 10%;
   color: $terciario;
   text-align: center;
+  position: relative;
+  bottom: 0px;
+  padding-top: 55%;
+  margin-top: auto;
 }
+
 
 .info{
   background-color: $secundario;
   
 }
+
 .pie-pagina {
     width: 100%;
     background-color: $principal;
+    
   
     .caja0 {
       width: 90%;
       max-width: 1200px;
       margin: auto;
       display: grid;
+      
   
       .caja {
-        h1 {
+        h2 {
           color: $terciario;
           margin-bottom: 25px;
           font-size: 20px;

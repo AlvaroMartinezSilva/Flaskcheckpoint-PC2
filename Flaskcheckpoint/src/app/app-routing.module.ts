@@ -11,14 +11,13 @@ const routes: Routes = [
 path:'analisis-sentimientos', component: AnalisisSentimientosComponent
 
 },{
-  path:'', component: WelcomeComponent
+  path:'welcome', component: WelcomeComponent
 
 },{
 
   path:'description', component: DescriptionComponent
 
-}
-
+},
 
 ];
 
