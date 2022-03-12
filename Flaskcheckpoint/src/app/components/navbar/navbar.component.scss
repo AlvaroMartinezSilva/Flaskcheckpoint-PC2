@@ -1,13 +1,14 @@
 @import '_colors';
 
 .navbar{
-  position: relative;
+  position: fixed;
   left: 0;
-  bottom: 0;
+  top: 0%;
   width: 100%;
   color: $principal;
   background-color: $secundario;
   text-align: center;
+  
 }
 .navbar-brand {
   font-weight: bold;
