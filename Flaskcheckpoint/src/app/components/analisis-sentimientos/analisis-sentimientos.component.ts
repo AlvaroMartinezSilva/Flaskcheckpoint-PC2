@@ -39,21 +39,21 @@ export class AnalisisSentimientosComponent implements OnInit {
   }
 
   makeRequest() {
-    this.http.post('http://127.0.0.1:5000/analisis', { 
+    this.http.post('http://127.0.0.1:5000/analisis-sentimientos', { 
       cuerpo: this.textareaContent
     }).toPromise().then(response => {
       console.log(response);
       this.json = response;
       if(this.json.compound >= 0.5){
-        this.imagen = '.png';
+        this.imagen = './assets/feliz.png';
         this.result = "Texto Positivo"
       }
       else if(this.json.compound > -0.5 && this.json.compound < 0.5){
-        this.imagen = '.png';
+        this.imagen = './assets/neutro.png';
         this.result = "Texto Neutro"
       }
       else if(this.json.compound <= -0.5){
-        this.imagen = '.png';
+        this.imagen = './assets/triste.png';
         this.result = "Texto Negativo"
       }
       }
