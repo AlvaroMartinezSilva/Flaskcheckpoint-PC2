@@ -2,12 +2,15 @@
 
 .navbar{
   position: fixed;
-  left: 0;
-  top: 0%;
+  z-index: 1000;
+  top: 0;  
+  left:0;
   width: 100%;
   color: $principal;
   background-color: $secundario;
   text-align: center;
+  
+  
   
 }
 .navbar-brand {

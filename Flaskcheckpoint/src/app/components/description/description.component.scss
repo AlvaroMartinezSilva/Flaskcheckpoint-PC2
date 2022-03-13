@@ -2,18 +2,23 @@
 
 .description{
   position: absolute;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  padding-left: 10%;
-  color: $texto;
+    color: $texto;
+    border-radius: 20px;
+    padding: 0.5%;
+    top: 13%;
+    left: 5%;
+    
+
   h1{
       color: #26DFBA;
       text-align: center;
   }
 
 .text1{
-  padding-left: 27%;
-  padding-right: 27%;
+  p{
+  padding-left: 14%;
+  padding-right: 14%;
+  }
 }
 
 .image{
@@ -26,8 +31,9 @@
   }
 }
 .text2{
-  padding-left: 27%;
-  padding-right: 27%;
-  
+  p{
+  padding-left: 12%;
+  padding-right: 12%;
+  }
 }
 }
