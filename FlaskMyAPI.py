@@ -17,9 +17,9 @@ def emocional(texto):
     sentiment = sentiment_analysis.SentimentAnalysisSpanish()
     sentimiento = sentiment.sentiment(texto) #[0,1]
     carita = ":|"
-    if sentimiento > 0.5:
+    if sentimiento > 0.6:
         carita = ":)"
-    elif sentimiento < 0.5:
+    elif sentimiento < 0.4:
         carita = ":("
     
     return sentimiento, carita

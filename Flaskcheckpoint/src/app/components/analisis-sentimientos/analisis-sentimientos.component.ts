@@ -28,42 +28,23 @@ export class AnalisisSentimientosComponent implements OnInit {
 
   }
 
-  analizarTexto(texto: string){
+  analizarTexto(){
 
 
 
-    this.flask_api.analizarSentimiento(texto).subscribe((res) =>
+    this.flask_api.analizarSentimiento(this.texto).subscribe((res) =>
     {
-      console.log('Res ', res)
+      console.log('Res ', res);
+      console.log('Res',res.analisis.carita);
+      this.texto='Sentimiento: '+res.analisis.carita+'\nResultado: '+res.analisis.sentimiento+'\nTexto: '+res.analisis.texto;
+
     });
   }
 
-  makeRequest() {
-    this.http.post('http://127.0.0.1:5000/analisis-sentimientos', { 
-      cuerpo: this.textareaContent
-    }).toPromise().then(response => {
-      console.log(response);
-      this.json = response;
-      if(this.json.compound >= 0.5){
-        this.imagen = './assets/feliz.png';
-        this.result = "Texto Positivo"
-      }
-      else if(this.json.compound > -0.5 && this.json.compound < 0.5){
-        this.imagen = './assets/neutro.png';
-        this.result = "Texto Neutro"
-      }
-      else if(this.json.compound <= -0.5){
-        this.imagen = './assets/triste.png';
-        this.result = "Texto Negativo"
-      }
-      }
-      
-    )
-    
-  }
 
 
-  
+
+
 
 
 

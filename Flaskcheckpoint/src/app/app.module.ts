@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { DescriptionComponent } from './components/description/description.component';
 import { FlaskApiService } from './services/flask-api.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
 
@@ -27,7 +28,8 @@ import { FlaskApiService } from './services/flask-api.service';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
 
   providers: [FlaskApiService],
