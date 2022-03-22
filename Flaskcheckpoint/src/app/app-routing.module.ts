@@ -5,6 +5,7 @@ import { DescriptionComponent } from './components/description/description.compo
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { PruebaNgforYNgifComponent } from './components/prueba-ngfor-y-ngif/prueba-ngfor-y-ngif.component';
 
 const routes: Routes = [
 {
@@ -16,6 +17,10 @@ path:'analisis-sentimientos', component: AnalisisSentimientosComponent
 },{
 
   path:'description', component: DescriptionComponent
+
+},{
+
+  path:'prueba', component: PruebaNgforYNgifComponent
 
 },
 

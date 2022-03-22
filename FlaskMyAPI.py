@@ -3,6 +3,7 @@
 #from urllib import request
 from flask import Flask, jsonify, request, abort, make_response
 from flask_cors import CORS, cross_origin#CORs $pip install -U flask-cors
+import json
 
 #Bucle del servidor
 app = Flask(__name__)
@@ -24,6 +25,10 @@ def emocional(texto):
     
     return sentimiento, carita
 
+textos = []
+def obj_dict(obj):
+    return obj.__dict__
+
 #Funciones ENDPOINTS
 
 @app.route('/sentimiento', methods = ['POST'])
@@ -37,11 +42,17 @@ def sentimental():
         'sentimiento': sentimiento[0],
         'carita': sentimiento[1]
     }
+    textos.append(analisis)
     return jsonify( {'analisis': analisis })
 
 @app.route('/saludo', methods = ['GET'])
 def saludo():
     return jsonify( {'saludo': 'Hola, ya estoy conectada' })
+
+@app.route('/sentimientos', methods = ['GET'])
+def sentimientos():
+    json_string = json.dumps(textos, default=obj_dict)
+    return json_string
 
 #Pordefecto
 @app.route('/', methods = ['GET'])

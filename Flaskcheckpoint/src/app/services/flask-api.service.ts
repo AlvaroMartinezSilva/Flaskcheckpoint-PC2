@@ -23,4 +23,11 @@ export class FlaskApiService {
     return respuestaAPI;
   }
 
+  logSentimientos():Observable<any>{
+
+    var respuestaAPI = this.http.get<any>('http://127.0.0.1:5000/sentimientos');
+
+    return respuestaAPI;
+  }
+
 }

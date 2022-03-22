@@ -12,6 +12,7 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { DescriptionComponent } from './components/description/description.component';
 import { FlaskApiService } from './services/flask-api.service';
 import { FormsModule } from '@angular/forms';
+import { PruebaNgforYNgifComponent } from './components/prueba-ngfor-y-ngif/prueba-ngfor-y-ngif.component';
 
 @NgModule({
 
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     AnalisisSentimientosComponent,
     WelcomeComponent,
-    DescriptionComponent
+    DescriptionComponent,
+    PruebaNgforYNgifComponent
   ],
 
   imports: [
