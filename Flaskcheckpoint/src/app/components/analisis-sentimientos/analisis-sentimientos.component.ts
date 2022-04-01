@@ -36,7 +36,7 @@ export class AnalisisSentimientosComponent implements OnInit {
     {
       console.log('Res ', res);
       console.log('Res',res.analisis.carita);
-      this.texto='Sentimiento: '+res.analisis.carita+'\nResultado: '+res.analisis.sentimiento+'\nTexto: '+res.analisis.texto;
+      this.result='Sentimiento: '+res.analisis.carita+'\nResultado: '+res.analisis.sentimiento+'\nTexto: '+res.analisis.texto;
 
     });
   }

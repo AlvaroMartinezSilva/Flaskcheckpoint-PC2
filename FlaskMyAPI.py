@@ -39,9 +39,7 @@ def sentimental():
     }
     return jsonify( {'analisis': analisis })
 
-@app.route('/saludo', methods = ['GET'])
-def saludo():
-    return jsonify( {'saludo': 'Hola, ya estoy conectada' })
+
 
 #Pordefecto
 @app.route('/', methods = ['GET'])
